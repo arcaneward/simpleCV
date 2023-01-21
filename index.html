@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>The resume of {name here}</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="{MetaDescription}">
+<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+<style>
+@font-face {
+font-family: "CooperBlackRegular";
+src: url("CooperBlackRegular.ttf");
+}
+
+body {
+    background:#fff;
+    font-family: 'Lato', sans-serif;
+    font-size:13px;
+    line-height:180%;
+    color:#56432d;
+    margin:0;
+    padding:0;
+    -moz-osx-font-smoothing:grayscale;
+    -webkit-font-smoothing:antialiased;
+}
+ 
+a {
+    text-decoration:none;
+    color:#56432d; 
+}
+ 
+#content {
+    height:100%;
+    overflow:auto;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin:150px auto;
+}
+ 
+header {
+    width:750px;
+    padding:9px 50px 0px 50px;
+    text-align:center;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+ 
+#title {
+    font-family: "CooperBlackRegular", sans-serif;
+    font-size:5em;
+    color: #65b0bb;
+    border-bottom:5px solid #e1dac7;
+    padding:30px 30px 50px 30px;
+    margin-bottom: 30px;
+}
+ 
+#links {
+    padding-top: 15px;
+}
+ 
+#links a {
+    display:inline-block;
+    text-transform:uppercase;
+    margin-left:7px;
+ 
+}
+ 
+#links a:first-of-type {
+    margin-left:0px;
+}
+ 
+#about {
+    width:755px;
+    margin-top:60px;
+    column-count:2;
+    column-gap:50px;
+    padding:0px 50px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+ 
+.box {
+    width:300px;
+    break-inside:avoid; 
+    display:inline-block;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding-top:50px;
+ 
+}
+ 
+.line {
+    position:relative;
+    width:100%;
+    height:5px;
+    background:#e1dac7;
+    margin-bottom:20px;
+}
+ 
+.line .label {
+    position:absolute;
+    font-size:24px;
+    background:#ffffff;
+    margin-top:-12px;
+    padding-right:10px;
+    color:#65b0bb; 
+    font-family: "CooperBlackRegular", sans-serif;
+}
+ 
+.text {
+    text-align:justify;
+}
+ 
+#picture img{
+    width:100%; 
+    -moz-border-radius:8px;
+	-webkit-border-radius:8px;
+	border-radius: 10px;
+	box-shadow: #65b0bb 5px 5px, #56432d 10px 10px, #e1dac7 15px 15px, #e1aa46 20px 20px;
+}
+ 
+#date {
+    text-align:left;
+    margin-top:10px;
+}
+ 
+.gauge { 
+	height:7px; 
+	position:relative;
+	background:#e1dac7;
+	-moz-border-radius: 15px;
+	-webkit-border-radius: 15px;
+	border-radius:15px;
+	padding:6px;
+}
+ 
+.gauge > span {
+  display: block;
+  height: 100%;
+  border-radius:8px;
+  background-color:#56432d;
+  position: relative;
+  overflow: hidden;
+}
+ 
+.skill {
+    margin-top:30px;
+    text-align:right;
+}
+ 
+.still-label {
+    text-transform:uppercase;
+    margin-bottom:8px;
+    font-size:12px;
+}
+ 
+table {
+    margin:auto;
+    width:100%;
+    font-size:12px;
+    border-collapse: collapse;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+ 
+th {
+    font-weight:600;
+    vertical-align:top;
+    text-align:left;
+    width:100px;
+}
+ 
+td {
+    padding-left:15px;
+    text-align:right;
+}
+ 
+.top a{
+    text-align:center;
+    background:#fff;
+    position:fixed;
+    right:25px;
+    bottom:25px;
+    font-size:11px;
+    font-family:calibri;
+    color:#56432d;
+    line-height:100%;
+    z-index:999;
+    border-radius:4px;
+    -moz-border-radius:4px;
+    -webkit-border-radius:4px;
+    padding:5px 8px 6px 8px;
+}
+ 
+ .nav {
+  font-family: "CooperBlackRegular", sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.nav * {
+  box-sizing: border-box;
+  transition: all .35s ease;
+}
+
+.nav li {
+  display: inline-block;
+  list-style: outside none none;
+  margin: .5em 1em;
+  padding: 0;
+}
+
+.nav a {
+  padding: .5em .8em;
+  color: #e1aa46;
+  position: relative;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.nav a::before,
+.nav a::after {
+  content: '';
+  height: 14px;
+  width: 14px;
+  position: absolute;
+  transition: all .35s ease;
+  opacity: 0;
+}
+
+.nav a::before {
+  content: '';
+  right: 0;
+  top: 0;
+  border-top: 3px solid #56432d;
+  border-right: 3px solid #56432d;
+  transform: translate(-100%, 50%);
+}
+
+.nav a:after {
+  content: '';
+  left: 0;
+  bottom: 0;
+  border-bottom: 3px solid #56432d;
+  border-left: 3px solid #56432d;
+  transform: translate(100%, -50%)
+}
+
+.nav a:hover:before,
+.nav a:hover:after{
+  transform: translate(0,0);
+  opacity: 1;
+}
+
+.nav a:hover {
+  color: #65b0bb;
+}
+</style> 
+</head> 
+<body>
+ 
+<div id="content">
+<div id="content-txt">
+<header>
+<div id="title">&#128221; Name Here</div>
+<div class="nav">
+    <a href="/">Linkedin</a>
+    <a href="/">Github</a>
+    <a href="/">E-mail</a>
+    </div>
+</header>
+
+<div id="about">
+
+<div class="box">
+<div id="picture">
+<img src="avatar.jpg" alt="avatar">
+</div>
+</div>
+
+<div class="box">
+<div class="line"><div class="label">About</div></div>
+<div class="text">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam pharetra dolor at est dignissim, rhoncus aliquet est lacinia. Vestibulum quis tellus non sem faucibus faucibus in vel leo. Sed a malesuada massa. Vivamus id tempus est. Proin eu ipsum massa. Sed scelerisque ex diam, vitae malesuada est sodales nec. Nullam at placerat risus, ut egestas sem. Donec luctus quam efficitur, efficitur ligula et, accumsan nulla. Aenean egestas sapien sit amet ullamcorper dictum. Vestibulum elementum, diam ac placerat vestibulum, ligula eros aliquam tellus, at lobortis lorem eros a augue.
+<br><br>
+Maecenas lacinia ut nunc id faucibus. Proin in nunc id ligula convallis sollicitudin. Cras leo urna, euismod at iaculis vitae, consectetur eu nisl. Aliquam elementum sem ac nunc lobortis porttitor. Nunc mauris nisi, efficitur et consectetur in, commodo ut velit. Praesent elementum lorem sed libero pharetra, vel vestibulum eros condimentum.
+</div>
+</div>
+
+<div class="box">
+<div class="line"><div class="label">Skills</div></div>
+<div class="text">
+<div class="skill">
+<div class="skill-label">HTML (100%)</div>
+<div class="gauge">
+<span style="width:100%"></span>
+</div>
+</div>
+<div class="skill">
+<div class="skill-label">CSS (77%)</div>
+<div class="gauge">
+<span style="width:77%"></span>
+</div>
+</div>
+<div class="skill">
+<div class="skill-label">Javascript (85%)</div>
+<div class="gauge">
+<span style="width:85%"></span>
+</div>
+</div>
+
+<div class="box">
+<div class="line"><div class="label">Education</div></div>
+<div id="text">
+<strong>Major or program here</strong><br>
+College or University
+<div id="date">
+&mdash; 2019 - 2023, graduated
+</div>
+</div>
+</div>
+
+<div class="box">
+<div class="line"><div class="label">Experience</div></div>
+<div class="text">
+<strong>Position</strong><br>
+<i>Company</i>, dates<br>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. In lacinia lorem in enim blandit hendrerit. Nullam iaculis metus non mollis pulvinar.
+<br><br>
+<strong>Position</strong><br>
+<i>Company</i>, dates<br>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. In lacinia lorem in enim blandit hendrerit. Nullam iaculis metus non mollis pulvinar.
+<br><br>
+<strong>Position</strong><br>
+<i>Company</i>, dates<br>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. In lacinia lorem in enim blandit hendrerit. Nullam iaculis metus non mollis pulvinar.
+<br><br>
+</div>
+</div>
+</div>
+
+
+</div>
+</div>
+
+</div>
+</div>
+</html>
